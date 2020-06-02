@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>好好学习吧</title>
+    <script src="https://cdn.bootcss.com/react/16.8.6/umd/react.development.js"></script>
+    <script src="https://cdn.bootcss.com/react-dom/16.8.6/umd/react-dom.development.js"></script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/babel-standalone/6.26.0/babel.js"></script>
+</head>
+<body>
+    <div id="box"> </div>
+    <!-- <script src="./first.ts"></script> -->
+        <script type="text/babel">
+            //babel:es6=>es5 ,解析jsx
+            /*
+            jsx实际是一种语法糖
+            */
+            let a = <div>hello world</div>
+            a = React.createElement('h1',null,'jsx 实际是一种语法糖')
+            console.log(ReactDOM,'加油啊！大明')
+            ReactDOM.render(a,document.querySelector("#box"))
+        </script>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>好好学习吧</title>
+    <script src="https://cdn.bootcss.com/react/16.8.6/umd/react.development.js"></script>
+    <script src="https://cdn.bootcss.com/react-dom/16.8.6/umd/react-dom.development.js"></script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/babel-standalone/6.26.0/babel.js"></script>
+</head>
+
+<body>
+    <div id="box"> </div>
+    <!-- <script src="./first.ts"></script> -->
+    <script type="text/babel">
+
+        const FuncApp = (props) => {
+
+            const { useMemo, useCallback } = React
+
+            return (
+                <span>
+                    {
+                        useMemo((props) => {
+                            console.log('重新计算')
+                            props
+                        }, [props])
+                    }
+                </span>
+            )
+
+        }
+        const Header = (props) => {
+            return (
+                <div>{props.title}</div>
+            )
+
+        }
+        class MyApp extends React.Component {
+            constructor(props) {
+                super(props)
+                this.state = {
+                    count:0,
+                    titile:'react angluar vue'
+                }
+
+            }
+            editCount = (type) => {
+                switch (type) {
+                    case 'add':
+                        this.state = {
+                            count: count + 1
+                        }
+                        break;
+                    case 'dec':
+                        this.state = {
+                            count: count - 1
+                        }
+                        break;
+                    default:
+                        break;
+                }
+            }
+            render() {
+                return (
+                    <div>
+                        <span onClick={() => this.editCount('add')}>+</span>
+                        <span onClick={() => this.editCount('dec')}>-</span>
+                        <Header  />
+                        <FuncApp {...this.state.count} />
+                    </div>
+                )
+            }
+        }
+
+        ReactDOM.render(<MyApp />, document.querySelector('#box'))
+    </script>
+</body>
+
+</html>
