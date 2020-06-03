@@ -1,81 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>好好学习吧</title>
     <script src="https://cdn.bootcss.com/react/16.8.6/umd/react.development.js"></script>
     <script src="https://cdn.bootcss.com/react-dom/16.8.6/umd/react-dom.development.js"></script>
     <script src="https://cdn.bootcdn.net/ajax/libs/babel-standalone/6.26.0/babel.js"></script>
-</head>
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    .add {
+      cursor: pointer;
+    }
+    .dec {
+      cursor: pointer;
+    }
+    #box {
+      width: 200px;
+      margin: 500px auto;
+    }
+  </style>
 
-<body>
-    <div id="box"> </div>
+  <body>
+    <div id="box"></div>
     <!-- <script src="./first.ts"></script> -->
     <script type="text/babel">
-
-        const FuncApp = (props) => {
-
-            const { useMemo, useCallback } = React
-
-            return (
-                <span>
-                    {
-                        useMemo((props) => {
-                            console.log('重新计算')
-                            props
-                        }, [props])
-                    }
-                </span>
-            )
-
+      const FuncApp = props => {
+        const { useMemo, useCallback } = React;
+        console.log(props, "funcProps");
+        return useMemo(() => {
+          console.log("重新计算");
+          return <span>{props.count}</span>;
+        }, [props.count]);
+        // return <span>{props.count}</span>;
+      };
+      const Header = props => {
+        const { changeTitle } = props;
+        return (
+          <div>
+            <span>{props.titile}</span>
+            <button onClick={changeTitle}>改变title</button>
+          </div>
+        );
+      };
+      class MyApp extends React.Component {
+        constructor(props) {
+          super(props);
+          this.state = {
+            count: 0,
+            titile: "react angluar vue",
+          };
         }
-        const Header = (props) => {
-            return (
-                <div>{props.title}</div>
-            )
-
+        editCount = type => {
+          switch (type) {
+            case "add":
+              this.setState({
+                count: this.state.count + 1,
+              });
+              break;
+            case "dec":
+              this.setState({
+                count: this.state.count - 1,
+              });
+              break;
+            default:
+              break;
+          }
+        };
+        changeTitle = () => {
+          this.setState({
+            titile: this.state.titile + "1",
+          });
+        };
+        render() {
+          return (
+            <div>
+              <span className="add" onClick={() => this.editCount("add")}>
+                +
+              </span>
+              <FuncApp {...this.state} />
+              <span className="dec" onClick={() => this.editCount("dec")}>
+                -
+              </span>
+              <Header {...this.state} changeTitle={this.changeTitle} />
+            </div>
+          );
         }
-        class MyApp extends React.Component {
-            constructor(props) {
-                super(props)
-                this.state = {
-                    count:0,
-                    titile:'react angluar vue'
-                }
+      }
 
-            }
-            editCount = (type) => {
-                switch (type) {
-                    case 'add':
-                        this.state = {
-                            count: count + 1
-                        }
-                        break;
-                    case 'dec':
-                        this.state = {
-                            count: count - 1
-                        }
-                        break;
-                    default:
-                        break;
-                }
-            }
-            render() {
-                return (
-                    <div>
-                        <span onClick={() => this.editCount('add')}>+</span>
-                        <span onClick={() => this.editCount('dec')}>-</span>
-                        <Header  />
-                        <FuncApp {...this.state.count} />
-                    </div>
-                )
-            }
-        }
-
-        ReactDOM.render(<MyApp />, document.querySelector('#box'))
+      ReactDOM.render(<MyApp />, document.querySelector("#box"));
     </script>
-</body>
-
+  </body>
 </html>
