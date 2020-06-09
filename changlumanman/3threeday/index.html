@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*练习
+        *创建Find函数，在未知深度的对象中寻找键值对，找到返回键值对所在路径，
+        */
+        const obj = {
+            a:{
+                c:{
+                    w:2,
+                    r:{
+                        q:4
+                    }
+                },
+                d:1,
+                f:2,
+                e:3
+            },
+            b:{
+                h:4,
+                i:{
+                    p:{
+                        q:5
+                    }
+                }
+            }
+        }
+        Object.prototype.Find = function(key,value){
+            try{
+                if(!key||!value){
+                    throw "key和value值为必传,"
+                }
+            }
+            catch(err){
+                window.alert(err)
+                return null
+            }
+            console.log(this,{[key]:value})
+        }
+        let obj = this;
+        let resUrl = []
+        
+        
+    </script>
+</body>
+</html>
