@@ -31,7 +31,8 @@
                         q: 5
                     }
                 }
-            }
+            },
+            c:9
         }
         Object.prototype.Find = function (key, value) {
             try {
@@ -46,15 +47,16 @@
             console.log(this, { [key]: value })
             let obj = this;
             let resUrl = []
-            for(let i in obj){
-                if(i===key&&obj[i]===value){
+            for (let i in obj) {
+                if (i === key && obj[i] === value) {
                     //做到这里
+                    return [key]
                 }
             }
-            return resUrl
+            
         }
 
-
+        
 
     </script>
 </body>
