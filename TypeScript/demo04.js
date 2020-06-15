@@ -28,15 +28,19 @@
 // var result:string = searchXiaoJieJie(22) 
 // console.log(result)
 /*有剩余参数的函数*/
-// function searchXiaoJieJie(...xuqiu:string[]):string{
-//   let uu:string = '找到了'
-//   for(let i=0;i<xuqiu.length;i++){
-//     yy+=xuqiu[i]
-//     if(i<xuqiu.length){
-//       yy+='、'
-//     }
-//   }
-//   return yy+='找到了'
-// }
-// var result:string = searchXiaoJieJie(22) 
-// console.log(result)
+function searchXiaoJieJie() {
+    var xuqiu = [];
+    for (var _i = 0; _i < arguments.length; _i++) {
+        xuqiu[_i] = arguments[_i];
+    }
+    var uu = '找到了';
+    for (var i = 0; i < xuqiu.length; i++) {
+        uu += xuqiu[i];
+        if (i < xuqiu.length - 1) {
+            uu += '、';
+        }
+    }
+    return uu += '找到了';
+}
+var result = searchXiaoJieJie('22', 'ldm', 'want to be');
+console.log(result);
