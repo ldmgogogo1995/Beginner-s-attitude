@@ -1,0 +1,23 @@
+  
+  Ryan Dahl Deno node v8 TypeScript
+  
+  TypeScript JavaScript 超集  编程语言 静态类型和面向对象
+  
+  大型应用 或  多人协作
+  
+  TypeScript vs JavaScript
+ 
+  1.应用程序
+  
+  2.是JS超级（最终编译成JS）less sass css TypeScript => JavaScript
+  
+  3.跨平台 , 且开源
+
+  4.开始与js 终止于js
+
+  5.重用js ， 甚至可以直接引入js流行的库 echarts
+
+  6.TypeScript 类，接口，模块
+
+  
+  Deno node vue ng TypeScript react
