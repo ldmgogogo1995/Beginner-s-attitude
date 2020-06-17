@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>算法练习</title>
   </head>
   <body>
     <script>
@@ -11,12 +11,18 @@
       let colors = ["黑色", "白色"];
       let storages = ["64g", "256g"];
       const mapArrToObj = (a, b, c) => {
-        let obj= {}
-        names.forEach((item,index)=>{
-
-        })
+        let target = {};
+        for (let l in c) {
+          for (let d in b) {
+            for (let m in a) {
+              target[l + "-" + d + "-" + m] = c[l] + b[d] + a[m];
+            }
+          }
+        }
+        return target
       };
-      console.log(mapArrToObj(names, colors, storages));
+      console.log(mapArrToObj(storages, colors, names));
+      //完成！
     </script>
   </body>
 </html>
