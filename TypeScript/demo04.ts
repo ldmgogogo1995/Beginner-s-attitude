@@ -31,15 +31,16 @@
 
 /*有剩余参数的函数*/
 
-// function searchXiaoJieJie(...xuqiu:string[]):string{
-//   let uu:string = '找到了'
-//   for(let i=0;i<xuqiu.length;i++){
-//     yy+=xuqiu[i]
-//     if(i<xuqiu.length){
-//       yy+='、'
-//     }
-//   }
-//   return yy+='找到了'
-// }
-// var result:string = searchXiaoJieJie(22) 
-// console.log(result)
+function searchXiaoJieJie(...xuqiu:string[]):string{
+  let uu:string = '找到了'
+  for(let i=0;i<xuqiu.length;i++){
+    uu+=xuqiu[i]
+    if(i<xuqiu.length){
+        uu+='、'
+    }
+  }
+  return uu+='找到了'
+  
+}
+var result:string = searchXiaoJieJie('努力吧','ldm') 
+console.log(result)
