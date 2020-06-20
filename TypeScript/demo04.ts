@@ -35,12 +35,11 @@ function searchXiaoJieJie(...xuqiu:string[]):string{
   let uu:string = '找到了'
   for(let i=0;i<xuqiu.length;i++){
     uu+=xuqiu[i]
-    if(i<xuqiu.length){
-        uu+='、'
+    if(i<xuqiu.length-1){
+      uu+='、'
     }
   }
   return uu+='找到了'
-  
 }
-var result:string = searchXiaoJieJie('努力吧','ldm') 
+var result:string = searchXiaoJieJie('22','ldm','want to be') 
 console.log(result)

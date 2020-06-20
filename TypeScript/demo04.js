@@ -36,11 +36,11 @@ function searchXiaoJieJie() {
     var uu = '找到了';
     for (var i = 0; i < xuqiu.length; i++) {
         uu += xuqiu[i];
-        if (i < xuqiu.length) {
+        if (i < xuqiu.length - 1) {
             uu += '、';
         }
     }
     return uu += '找到了';
 }
-var result = searchXiaoJieJie('努力吧', 'ldm');
+var result = searchXiaoJieJie('22', 'ldm', 'want to be');
 console.log(result);

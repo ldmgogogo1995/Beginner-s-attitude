@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>随机手机</title>
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    .app {
+      width: 200px;
+      height: 200px;
+      margin: 300px auto;
+    }
+  </style>
+  <div class="app">
+    <div class="title">诺基亚</div>
+    <button onclick="getPhone()">开始</button>
+    <button onclick="stop()">停止</button>
+  </div>
+
+  <body>
+    <script>
+      let names = ["iPhone X", "iPhone XS","iPhone XxxxxS","iPhone XXXS"];
+      let colors = ["黑色", "白色","绿色","红色","紫色"];
+      let storages = ["64g", "256g"];
+      let title = document.querySelector(".title");
+      let timer;
+      //开始随机
+      const getPhone = () => {
+        if (timer != undefined) clearInterval(timer);
+        timer = setInterval(() => {
+          let Txt =
+            names[Math.round((names.length - 1) * Math.random())] +
+            " " +
+            colors[Math.round((colors.length - 1) * Math.random())] +
+            " " +
+            storages[Math.round((storages.length - 1) * Math.random())] +
+            " ";
+          title.innerHTML = Txt;
+        }, 500);
+      };
+      //清除定时器
+      const stop = () => {
+        clearInterval(timer);
+      };
+    </script>
+  </body>
+</html>

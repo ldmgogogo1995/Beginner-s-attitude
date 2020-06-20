@@ -14,8 +14,9 @@ var c:boolean = false
 
 //enum 类型 枚举  人：男人，女人，中性    四季：春、夏、秋、冬
 console.log('---------------------')
-enum REN{nan='男人',nv='女人',yao='妖'}
-console.log(REN.yao)
+// enum REN{nan='男人',nv='女人',yao='妖'}
+enum REN{nan,nv,yao=1,ldm=1}
+console.log(REN.nan,REN.nv,REN.yao,REN[1])
 
 
 //any 类型
