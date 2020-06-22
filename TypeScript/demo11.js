@@ -18,4 +18,8 @@ var ro = a;
 // ro.length = 100; // error!
 // a = ro; // error!
 a = ro;
-//妙啊！ 赋给另一个变量，另一个变量不会经过类型检查
+var Clock = /** @class */ (function () {
+    function Clock(h, m) {
+    }
+    return Clock;
+}());
