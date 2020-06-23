@@ -100,11 +100,43 @@ a = ro as number[]
 /** 
  * 类 类型
 */
-interface ClockInterface {
-    currentTime: Date;
-}
+// interface ClockInterface {
+//     currentTime: Date;
+//     setTime(d:Date):void
+// }
 
-class Clock implements ClockInterface {
-    currentTime: Date;
-    constructor(h: number, m: number) { }
-}
+// class Clock implements ClockInterface {
+//     currentTime:  Date;
+//     setTime(d: Date) {
+//       this.currentTime = d;
+//   }
+//     constructor(h: number, m: number) { }
+// }
+
+/** 
+ * 接口继承类
+*/
+// class Control {
+//   private state: any;
+// }
+
+// interface SelectableControl extends Control {
+//   select(): void;
+// }
+
+// class Button extends Control implements SelectableControl {
+//   select() { }
+// }
+
+// class TextBox extends Control {
+//   select() { }
+// }
+
+// // 错误：“Image”类型缺少“state”属性。
+// class Image implements SelectableControl {
+//   select() { }
+// }
+
+// class Location {
+
+// }
