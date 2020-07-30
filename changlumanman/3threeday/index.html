@@ -7,10 +7,10 @@
   </head>
 
   <body>
-    <span onclick="myFuckingBro()">大明加油</span>
+    <span onclick="myFuckingFoo()">大明加油</span>
     <script>
       /*练习
-       *创建Find函数，在未知深度的对象中寻找键值对，找到返回键值对所在路径，
+       *创建Find函数，在未知深度的对象中寻找键值对，找到返回键值对所在路径，没知道则返回NULL
        */
       const obj = {
         a: {
@@ -35,20 +35,31 @@
         c: 9,
       };
       Object.prototype.Find = function (key, value) {
-        try {
-          if (!key || !value) {
-            throw "key和value值为必传,";
-          }
-        } catch (err) {
-          window.alert(err);
-          return null;
-        }
+        console.log(this, "this");
         let obj = this;
+        let objArray = Object.entries(obj);
         let resUrl = [];
-        return resUrl;
+        let findRecord = [];
+        let isFind = false;
+        function findKeyValue() {
+          for (let i of objArray) {
+            console.log("key:", key, "value:", value);
+            console.log(i[0], i[1], "01");
+            console.log(Object.prototype.toString.call(i[1]) === "[object Object]");
+            if (i[0] === key && i[1] === value) {
+              isFind = true;
+              break
+            }
+            if (Object.prototype.toString.call(i[1]) === "[object Object]") {
+              i[1].Find(key, value)();
+            }
+          }
+        }
+        return isFind ? "成功" : findKeyValue;
       };
-      function myFuckingBro() {
-        console.log(obj.Find("q", 5));
+      function myFuckingFoo() {
+        // console.log(obj.Find("q", 5)());
+        console.log(obj.Find("q", 5)(), "结果");
       }
     </script>
   </body>
