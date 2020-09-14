@@ -5,7 +5,7 @@ const router = express.Router() //引入路由
 
 //用户模块(注册、登录、修改、删除)
 router.get('/login', (req, res) => {
-    console.log(req, '登录参数')
+    console.log(req.query, '登录参数')
     res.send({
         error: 0,
         msg: '登陆成功'
