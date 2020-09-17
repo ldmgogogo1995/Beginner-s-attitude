@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array</title>
+</head>
+
+<body>
+    <script>
+        /** 
+         * @@iterator 类型的迭代器数组方法 entries keys of ....
+         * 
+         */
+        let arrIterator = new Array(7).fill(0)
+            // const iterator = arrIterator[Symbol.iterator]()
+            // console.log(iterator.next());    0 
+            // console.log(iterator.next());    0
+            // console.log(iterator.next());    ...
+            // console.log(iterator.next());
+            // console.log(iterator.next());
+            // console.log(iterator.next());
+            // console.log(iterator.next());
+            // console.log(iterator.next());      undefined
+            // console.log(iterator.next());      undefined
+
+        /** 
+         * for of 可以遍历迭代器  并且再调用迭代器 会undefined
+         */
+
+        // for (const n of iterator) {
+        //     console.log(n)
+        // }
+
+        /**
+         * entries  得到键值对的迭代器
+         */
+        // const iterator = arrIterator.entries()
+
+        /**
+         * keys  得到键的迭代器
+         */
+
+        // const iterator = arrIterator.keys()
+        // for (const n of iterator) {
+        //     console.log(n)
+        // }
+        console.log(iterator.next());
+    </script>
+</body>
+
+</html>
