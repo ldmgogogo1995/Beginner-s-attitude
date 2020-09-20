@@ -1,11 +1,9 @@
 //1  建立路由规则
 const express = require('express')
-const router = express.Router() //引入路由
-
-
-//用户模块(注册、登录、修改、删除)
+const router = express.Router() //引入路由、
+const db = require('../server')
+    //用户模块(注册、登录、修改、删除)
 router.get('/login', (req, res) => {
-    console.log(req.query, '登录参数')
     res.send({
         error: 0,
         msg: '登陆成功'
@@ -35,5 +33,4 @@ router.put('/edit', (req, res) => {
     })
 
 })
-
 module.exports = router
