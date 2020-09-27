@@ -28,12 +28,28 @@
 /**
  * 剩余参数
 */
-function buildName(firstName) {
-    var restOfName = [];
-    for (var _i = 1; _i < arguments.length; _i++) {
-        restOfName[_i - 1] = arguments[_i];
+// function buildName(firstName: string, ...restOfName: string[]) {
+//     return firstName + " " + restOfName.join(" ")
+// }
+// let buildNameFun:(fname:string,...rest:string[])=>string  = buildName
+// console.log(buildNameFun('Luo daming', 'luodxiaoming', 'luodami'));
+/**
+ * 复习this
+*/
+var deck = {
+    suit: ['hearts', 'spades', 'clubs', 'diamonds'],
+    cards: Array(52),
+    createCardPicker: function () {
+        return function () {
+            var pickedCard = Math.floor(Math.random() * 52);
+            var pikedSuit = Math.floor(pickedCard / 13);
+            console.log(this, 'this');
+            return { suit: this.suit[pikedSuit], card: pickedCard % 13 };
+        };
     }
-    return firstName + " " + restOfName.join(" ");
-}
-var buildNameFun = buildName;
-console.log(buildNameFun('Luo daming', 'luodxiaoming', 'luodami'));
+};
+var cardPicker = deck.createCardPicker();
+var pickedCard = cardPicker();
+//直接调用 cardPicker 实际是this 指向window对象
+// console.log('card:' + pickedCard.card, +'of:' + pickedCard.suit)
+console.log(cardPicker);

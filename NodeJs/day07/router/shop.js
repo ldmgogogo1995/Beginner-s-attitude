@@ -1,10 +1,10 @@
 const router = require('express').Router()
 const db = require('../server')
-console.log(db, 'db')
-let sql, data;
-//商品列表不分页
+let sql, data, dbName;
+dbName = 'shop'
+    //商品列表不分页
 router.get('/list', (req, res) => {
-        sql = "SELECT  * FROM shop"
+        sql = "SELECT  * FROM ${dbName}"
         db.query(sql, (err, result) => {
             if (!err) {
                 data = result
@@ -17,6 +17,10 @@ router.get('/list', (req, res) => {
                 })
             } else {
                 console.log(err, '失败')
+                res.send({
+                    code: 400,
+                    msg: '查询失败'
+                })
                 return
             }
         })
@@ -24,17 +28,57 @@ router.get('/list', (req, res) => {
     })
     //商品添加
 router.post('/add', (req, res) => {
-        res.send({
-            code: 200,
-            msg: '添加商品成功'
+        const {
+            title,
+            price,
+            is_enable
+        } = req.body
+        sql = `insert into ${dbName} (title,price,is_enable)values(${"'"+title+"'"+','+price+','+"'"+is_enable+"'"})`
+        db.query(sql, (err, result) => {
+            if (!err) {
+                console.log(result, 'result')
+                res.send({
+                    code: 200,
+                    msg: '添加商品成功'
+                })
+            } else {
+                console.log(err, '失败');
+                res.send({
+                    code: 400,
+                    msg: '添加失败'
+                })
+            }
         })
+
     })
     //商品删除
 router.delete('/del', (req, res) => {
-        res.send({
-            code: 200,
-            msg: '商品删除成功'
+        const {
+            id
+        } = req.body
+        if (!id) {
+            res.send({
+                code: 400,
+                msg: '请传入需要删除项目的id'
+            })
+            return
+        }
+        sql = `delete from ${dbName} where Id=${id}`
+        db.query(sql, (err, result) => {
+            if (!err) {
+                res.send({
+                    code: 200,
+                    msg: '商品删除成功'
+                })
+                console.log(result, 'result')
+            } else {
+                res.send({
+                    code: 400,
+                    msg: '操作失败'
+                })
+            }
         })
+
     })
     //商品修改
 router.put('/edit', (req, res) => {
