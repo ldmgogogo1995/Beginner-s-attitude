@@ -82,9 +82,38 @@ router.delete('/del', (req, res) => {
     })
     //商品修改
 router.put('/edit', (req, res) => {
-    res.send({
-        code: 200,
-        msg: '修改商品成功'
+    const {
+        id,
+        price,
+        title,
+        is_enable
+    } = req.body
+    if (!id) {
+        res.send({
+            code: 400,
+            msg: '请传入需要修改的id'
+        })
+        return
+    }
+    sql = `update shop set price=${price} ,title=${"'"+title+"'"} ,is_enable=${"'"+is_enable+"'"} where Id=${id}`
+    if (!title) sql = `update shop set price=${price}  ,is_enable=${"'"+is_enable+"'"} where Id=${id}`
+    if (!price) sql = `update shop set  ,title=${"'"+title+"'"} ,is_enable=${"'"+is_enable+"'"} where Id=${id}`
+    if (!is_enable) sql = `update shop set price=${price} ,title=${"'"+title+"'"} where Id=${id}`
+
+    db.query(sql, (err, result) => {
+        if (!err) {
+            res.send({
+                code: 200,
+                msg: '修改成功'
+            })
+        } else {
+            res.send({
+                code: 400,
+                msg: '修改失败'
+            })
+            console.log(err);
+        }
     })
+
 })
 module.exports = router
