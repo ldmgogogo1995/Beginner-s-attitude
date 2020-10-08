@@ -104,6 +104,10 @@ console.log(("card: " + pickedCard.card + " of " + pickedCard.suit));
 interface UIElement {
     addClickListener(onclick: (this: void, e: Event) => void): void
 }
+//指定了this类型后，你显式声明onClickBad必须在Handler的实例上调用。 然后TypeScript会检测到 addClickListener要求函数带有this: void。 改变 this类型来修复这个错误：
+interface Props {
+    info?: string
+}
 class Handler {
     info: string;
     onClickBad(this: Handler, e: Event) {
