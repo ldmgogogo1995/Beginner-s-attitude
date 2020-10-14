@@ -33,3 +33,5 @@ let output = identity<string>("myString")
 //第二种是  利用了类型推论--即编译器会根据传入的参数自动确定T 的类型
 let input = identity('string')
 /**  使用泛型变量*/
+
+//使用泛型创建像identity这样的泛型函数时，编译器要求你在函数体必须正确的使用这个通用的类型。 换句话说，你必须把这些参数当做是任意或所有类型。
