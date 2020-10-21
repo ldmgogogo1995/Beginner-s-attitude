@@ -1,10 +1,10 @@
-import React, { } from 'react';
+import React from 'react';
 import Count from './pages/Count'
 
 function App() {
   return (
     <div className="App">
-      <Count  />
+      <Count />
     </div>
   );
 }
