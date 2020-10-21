@@ -113,24 +113,24 @@ function create<T>(c: { new(): T; }): T {
     return new c();
 }
 //一个更高级的例子，使用原型属性推断并约束构造函数与类实例的关系
-class BeeKeeper {
+// class BeeKeeper {
 
-    hasMask: boolean
+//     hasMask: boolean
 
-}
-class ZooKeeper {
-    nametag: string
-}
-class AnimalLdm {
-    numLegs: number;
-}
-class Bee extends AnimalLdm {
-    keeper: BeeKeeper
-}
-class Lion extends AnimalLdm {
-    keeper: ZooKeeper
-}
-function createInstance<A extends AnimalLdm>(c: new () => A): A {
-    return new c();
-}
-console.log(createInstance(Lion), createInstance(Bee));
+// }
+// class ZooKeeper {
+//     nametag: string
+// }
+// class AnimalLdm {
+//     numLegs: number;
+// }
+// class Bee extends AnimalLdm {
+//     keeper: BeeKeeper
+// }
+// class Lion extends AnimalLdm {
+//     keeper: ZooKeeper
+// }
+// function createInstance<A extends AnimalLdm>(c: new () => A): A {
+//     return new c();
+// }
+// console.log(createInstance(Lion), createInstance(Bee));
