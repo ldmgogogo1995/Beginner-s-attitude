@@ -1,10 +1,10 @@
-import React from 'react';
-import './App.css';
+import React, { } from 'react';
+import Count from './pages/Count'
 
 function App() {
   return (
     <div className="App">
-       罗大明APP
+      <Count  />
     </div>
   );
 }

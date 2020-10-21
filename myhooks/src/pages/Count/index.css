@@ -1,0 +1,11 @@
+/** @format */
+
+.count-wrap {
+    margin: 300px auto;
+    width: 300px;
+    display: flex;
+    justify-content: space-between;
+}
+.btn {
+    cursor: pointer;
+}
