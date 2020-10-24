@@ -94,5 +94,50 @@ var FileAccess;
     FileAccess[FileAccess["ReadWrite"] = 6] = "ReadWrite";
     FileAccess[FileAccess["G"] = '123'.length] = "G";
 })(FileAccess || (FileAccess = {}));
-console.log(FileAccess.Read, FileAccess.Write, 'look');
-/**联合枚举与枚举成员的类型 */ 
+// console.log(FileAccess.Read, FileAccess.Write, 'look');
+/**联合枚举与枚举成员的类型 */
+//存在一种特殊的非计算的常量枚举成员的子集：字面量枚举成员。字面量枚举成员是指不带初始值的常量美剧成员或者是被初始化为：
+//（1）任何字符串字面量，（2）任何数字字面量，（3）应用了一元-符号的数字字面量
+//当所有枚举长远都拥有字面量枚举时，它就带有了一种特殊的语义。
+//首先枚举成员成了类型！例如,我们额可以说某些成员 只能是枚举成员的值：
+var ShapeKind;
+(function (ShapeKind) {
+    ShapeKind[ShapeKind["Cricle"] = 0] = "Cricle";
+    ShapeKind[ShapeKind["Square"] = 1] = "Square";
+})(ShapeKind || (ShapeKind = {}));
+// let c: Cricle = {
+//   kind: ShapeKind.Square,//~~~~~~~~Error!
+//   radius: 100
+// }
+//另一个变化是枚举本身变成了每个枚举成员的联合。虽然我们还没有讨论【联合类型】,但是你只要知道通过联合美剧，类型系统能够利用这样一个事实，它可以知道枚举里的值的集合。因此，TypeScript能够捕获在值比较时犯的愚蠢的错误。：例如
+var EtoFoo;
+(function (EtoFoo) {
+    EtoFoo[EtoFoo["Foo"] = 0] = "Foo";
+    EtoFoo[EtoFoo["Bar"] = 1] = "Bar";
+})(EtoFoo || (EtoFoo = {}));
+function f(x) {
+    if (x !== EtoFoo.Bar || x !== EtoFoo.Bar) {
+    }
+}
+/**运行时的枚举 */
+//枚举是运行时真正存在的对象。例如下面的枚举
+var Eoperation;
+(function (Eoperation) {
+    Eoperation[Eoperation["X"] = 0] = "X";
+    Eoperation[Eoperation["Y"] = 1] = "Y";
+    Eoperation[Eoperation["Z"] = 2] = "Z";
+})(Eoperation || (Eoperation = {}));
+function Fenum(obj) {
+    return obj.X;
+}
+//运行时 发现 Eoperation 有一个X 值为0
+// console.log(Fenum(Eoperation));
+/** 反向映射 */
+//除了创建一个以属性名为对象成员的对象之外，数字枚举成员还具有了反向映射，从枚举值到枚举枚举名字。例如，在下面的例子中：
+var Enum;
+(function (Enum) {
+    Enum[Enum["A"] = 0] = "A";
+})(Enum || (Enum = {}));
+var studyEnumA = Enum.A;
+var nameOfA = Enum[studyEnumA];
+console.log("studyEnumA:", studyEnumA, 'nameOfA:', nameOfA);
