@@ -1,4 +1,8 @@
+import render from '../index'
 const hooks: Array<any> = []
+function setState(){
+    
+}
 /**
  * useState
  * @param {
