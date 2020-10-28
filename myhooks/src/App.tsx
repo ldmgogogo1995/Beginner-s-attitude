@@ -1,7 +1,9 @@
 import React from 'react';
 import Count from './pages/Count'
+import { useRecoilState } from 'recoil'
+const App: React.FC = (props) => {
+  console.log(useRecoilState, 'useRecoilState');
 
-function App() {
   return (
     <div className="App">
       <Count />
