@@ -22,7 +22,7 @@ const Count: React.FC<CountProps> = (props) => {
   return (
     <div className='count-wrap'>
       <button onClick={() => { edit('add') }}>+</button>
-      <div>{number}</div>
+      <div>{number??0}</div>
       <button onClick={() => { edit('del') }}>-</button>
     </div>
   )
