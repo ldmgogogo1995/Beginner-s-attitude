@@ -1,8 +1,14 @@
 import render from '../index'
+
 const hooks: Array<any> = []
-let index
-function setState(){
-    
+let lastState: any
+function useState(initialState: any): Array<any> {
+    lastState = lastState ?? initialState
+    function setState(newState: any) {
+        lastState = newState;
+        render()
+    }
+    return [lastState, setState]
 }
 /**
  * useState
@@ -10,5 +16,7 @@ function setState(){
  *     initialState:any
  *  }
 */
-export default hooks
-// https://juejin.im/post/6872223515580481544
+export {
+    useState
+}
+
