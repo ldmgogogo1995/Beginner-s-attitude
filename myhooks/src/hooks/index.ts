@@ -38,7 +38,6 @@ function useMemo(callback: Function, dependencies: Array<any>) {
 let lastCallback: any
 let lastCallbackDependencies: any
 function useCallback<T extends (...arg: any[]) => any>(callback: T, dependencies: Array<any>): T {
-
     if (lastCallbackDependencies) {
         //查看依赖项是否发生改变
         let changed = !dependencies.every((item: any, index: number) => item === lastCallbackDependencies[index])
