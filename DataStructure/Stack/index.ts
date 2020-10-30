@@ -4,11 +4,11 @@
  *    push(elements):添加一个（或几个）新元素到栈顶
  * }
 */
-export class Stack{
+export class Stack {
   constructor() {
     this.items = []
   }
-  items: Array<any>
+  items: Array<string | number | Object | Function | undefined | null | symbol>
   push(elements) {
     this.items.push(elements)
   }

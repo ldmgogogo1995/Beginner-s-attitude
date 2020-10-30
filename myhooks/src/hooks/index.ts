@@ -1,6 +1,6 @@
 import render from '../index'
 
-const hooks: Array<any> = []
+// const hooks: Array<any> = []
 let lastState: any
 /**
  * useState
@@ -23,9 +23,8 @@ function useState(initialState: any): Array<any> {
     *      dependencies
     *  }
    */
-let lastCallback;
-let lastCallbackDependencies;
-function useMemo(callBack: Function, dependencies: Array<any>) {
+
+function useMemo(callback: Function, dependencies: Array<any>) {
 
 }
 /**
@@ -34,11 +33,28 @@ function useMemo(callBack: Function, dependencies: Array<any>) {
     *     callBack:Function,
     *      dependencies
     *  }
+    *   function useCallback<T extends (...args: any[]) => any>(callback: T, deps: DependencyList): T;
    */
-  function useCallback(){
-      
-  }
+let lastCallback: any
+let lastCallbackDependencies: any
+function useCallback<T extends (...arg: any[]) => any>(callback: T, dependencies: Array<any>): T {
+
+    if (lastCallbackDependencies) {
+        //查看依赖项是否发生改变
+        let changed = !dependencies.every((item: any, index: number) => item === lastCallbackDependencies[index])
+        if (changed) {
+            lastCallback = callback;
+            lastCallbackDependencies = dependencies
+        }
+    } else {
+        //此时 是第一次
+        lastCallback = callback
+    }
+    return lastCallback
+}
 export {
-    useState
+    useState,
+    useCallback,
+    useMemo
 }
 

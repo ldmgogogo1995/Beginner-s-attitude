@@ -1,6 +1,6 @@
 
-import React, { useCallback } from 'react'
-import { atom, useRecoilState, useRecoilValue, selector } from 'recoil'
+import React from 'react'
+import { atom, useRecoilState, } from 'recoil'
 
 import './index.css'
 const numberState = atom({
@@ -44,7 +44,7 @@ const Count: React.FC<CountProps> = (props) => {
   return (
     <div className='count-wrap'>
       <button onClick={() => { edit('add') }}>+</button>
-      <div>{number??0}</div>
+      <div>{number ?? 0}</div>
       <button onClick={() => { edit('del') }}>-</button>
     </div>
   )
