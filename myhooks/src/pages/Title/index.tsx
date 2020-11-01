@@ -12,6 +12,11 @@ function Title(): React.ReactElement {
     const changeTitle = useCallback((e: ChangeEvent) => {
         setTitle((e.target as HTMLInputElement).value)
     }, [])
+    let lastCallback;
+
+    console.log(lastCallback === changeTitle, 'render');
+
+    lastCallback = changeTitle
     return (
         <div>
             <input type="text" onChange={changeTitle} />
