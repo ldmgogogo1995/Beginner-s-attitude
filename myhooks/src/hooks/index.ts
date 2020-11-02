@@ -1,21 +1,28 @@
 import render from '../index'
 
 // const hooks: Array<any> = []
-let lastState: any
+
+interface UseState<S>{
+    (initialState: S | (() => S)): [S, any]
+}
+let lastStates: any[] = []
+let index: number = 0
+const initialIndex = () => index = 0
 /**
  * useState
  * @param {
     *     initialState:any
     *  }
    */
-function useState(initialState: any): Array<any> {
-    lastState = lastState ?? initialState
+const useState: UseState<any> =function (initialState) {
+    lastStates[index] = lastStates[index] ?? initialState
     function setState(newState: any) {
-        lastState = newState;
-        render()
+        lastStates[index] = newState;
+        render(initialIndex)
     }
-    return [lastState, setState]
+    return [lastStates[index], setState]
 }
+
 /**
  * useMemo
  * @param {
@@ -38,9 +45,13 @@ function useMemo(callback: Function, dependencies: Array<any>) {
 let lastCallback: any
 let lastCallbackDependencies: any
 function useCallback<T extends (...arg: any[]) => any>(callback: T, dependencies: Array<any>): T {
+    console.log(dependencies);
+
     if (lastCallbackDependencies) {
         //查看依赖项是否发生改变
         let changed = !dependencies.every((item: any, index: number) => item === lastCallbackDependencies[index])
+        console.log(changed, 'change');
+
         if (changed) {
             lastCallback = callback;
             lastCallbackDependencies = dependencies
