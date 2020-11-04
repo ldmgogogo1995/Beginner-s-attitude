@@ -10,7 +10,7 @@ let hookIndex: number = 0
 const initialIndex = () => {
     hookIndex = 0
 }
-type InitialState<S> = S | ((preState: S) => S)
+type InitialState<S> = S | ((preState: S) => S) | any
 /**
  * useState
  * @param {
@@ -22,9 +22,9 @@ const useState = function <T = any>(initialState: any) {
     const currentIndex = hookIndex
     function setState(newState: InitialState<T>) {
         if (typeof newState === 'function') {
-            console.log(lastStates, 'nnnnnnnnnnnnn');
+            lastStates[currentIndex] = newState(lastStates[currentIndex])
         } else {
-            console.log(lastStates, 'nnnnnnnnnnnnn');
+
             lastStates[currentIndex] = newState;
         }
         render()
@@ -64,6 +64,7 @@ function useCallback<T extends (...arg: any[]) => any>(callback: T, dependencies
     } else {
         //此时 是第一次
         lastCallback = callback
+        lastCallbackDependencies = dependencies
     }
     return lastCallback
 }
