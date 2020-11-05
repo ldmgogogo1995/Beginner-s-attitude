@@ -12,6 +12,8 @@ let memoStates: Array<any> = []
 let memoIndex: number = 0
 let lastCallback: any
 let lastCallbackDependencies: any
+let lastMemo: any;
+let lastMemoDependencies: any
 function useState<T>(initialState: T) {
   memoStates[memoIndex] = memoStates[memoIndex] ?? initialState
   const currIndex = memoIndex
@@ -30,7 +32,7 @@ function useState<T>(initialState: T) {
 function useCallback<T extends (...arg: any[]) => any>(callback: T, dependencies: Array<any>): T {
   if (lastCallbackDependencies) {
     //是否发生改变
-    const isChange: boolean = dependencies.every((item, index) => item === lastCallbackDependencies[index])
+    const isChange: boolean = !dependencies.every((item, index) => item === lastCallbackDependencies[index])
     if (isChange) {
       lastCallback = callback;
       lastCallbackDependencies = dependencies
@@ -41,19 +43,35 @@ function useCallback<T extends (...arg: any[]) => any>(callback: T, dependencies
   }
   return lastCallback
 }
+function useMemo<T extends (...arg: any[]) => any>(callback: T, dependencies: Array<any>): T {
+  if (lastMemoDependencies) {
+    //是否发生改变
+    const isChange: boolean = !dependencies.every((item, index) => item === lastMemoDependencies[index])
+    if (isChange) {
+      lastMemo = callback()
+      lastMemoDependencies = dependencies
+    }
+  } else {
+    lastMemo = callback()
+    lastMemoDependencies = dependencies
+  }
+  return lastMemo
+}
 const App: React.FC = function () {
   const [count, setCount] = useState<number>(0)
   const [title, setTitle] = useState<string>('')
-  // console.log(count + 1,'????');
   const changeCount = useCallback(() => {
-    setCount((count: number) => count + 1)
-  }, [])
+    setCount(count + 1)
+  }, [count])
+  const memoCount = useMemo(() => count + Math.random(), [count])
   return (
     <>
       <div
         onClick={changeCount}
         style={{ width: 300, margin: '200px auto', cursor: 'pointer' }}
-      >{count}</div>
+      >
+        {memoCount}
+      </div>
       <input type="text" onChange={e => setTitle(e?.target?.value)} />{title}
     </>
   )

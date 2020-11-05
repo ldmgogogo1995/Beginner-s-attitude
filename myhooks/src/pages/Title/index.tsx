@@ -12,10 +12,8 @@ function Title(): React.ReactElement {
     const [title, setTitle] = useState<string>('title')
     const [count, setCount] = useState<number>(0)
     const changeTitle = useCallback((e: ChangeEvent) => {
-        console.log(title, (e.target as HTMLInputElement).value, 'title');
         setTitle((e.target as HTMLInputElement).value)
     }, [])
-    // const memoCount = useMemo(() => count + 1, [count])
     return (
         <div style={{ margin: '200px auto', width: 500 }}>
             <input type="text" onChange={changeTitle} /><span>{title}</span>
