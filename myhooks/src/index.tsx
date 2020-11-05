@@ -45,9 +45,15 @@ const App: React.FC = function () {
   const [count, setCount] = useState<number>(0)
   const [title, setTitle] = useState<string>('')
   // console.log(count + 1,'????');
+<<<<<<< HEAD
   const changeCount = useCallback(()=>{
 
   },[])
+=======
+  const changeCount = useCallback(() => {
+    setCount((count: number) => count + 1)
+  }, [])
+>>>>>>> 6a7d929914198849351f791e371c5a81da3b7b47
   return (
     <>
       <div
