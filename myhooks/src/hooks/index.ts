@@ -1,4 +1,4 @@
-import render from '../index.copy'
+import render from '../index'
 
 // const hooks: Array<any> = []
 
@@ -18,9 +18,13 @@ type InitialState<S> = S | ((preState: S) => S) | any
     *  }
 */
 const useState = function <T = any>(initialState: any) {
+    console.log(lastStates, hookIndex, 'hookIndex');
+
     lastStates[hookIndex] = lastStates[hookIndex] ?? initialState
     const currentIndex = hookIndex
     function setState(newState: InitialState<T>) {
+        console.log(lastStates.length, 'lenght');
+
         if (typeof newState === 'function') {
             lastStates[currentIndex] = newState(lastStates[currentIndex])
         } else {
