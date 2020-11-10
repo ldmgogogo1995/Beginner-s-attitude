@@ -8,15 +8,15 @@ import { RecoilRoot } from 'recoil'
 const render = () => {
   import('./hooks').then(module => {
     module.initialIndex()
-  })
-  ReactDOM.render(
+  }).then(() => ReactDOM.render(
     <React.StrictMode>
       <RecoilRoot>
         <App />
       </RecoilRoot>
     </React.StrictMode>,
     document.getElementById('root')
-  );
+  ))
+
 }
 render()
 export default render

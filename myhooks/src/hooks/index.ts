@@ -9,33 +9,31 @@ let lastStates: any[] = []
 let hookIndex: number = 0
 const initialIndex = () => {
     hookIndex = 0
+
 }
 type InitialState<S> = S | ((preState: S) => S) | any
 /**
  * useState
  * @param {
+ * 
     *     initialState:any
     *  }
 */
 const useState = function <T = any>(initialState: any) {
-    console.log(lastStates, hookIndex, 'hookIndex');
 
     lastStates[hookIndex] = lastStates[hookIndex] ?? initialState
     const currentIndex = hookIndex
     function setState(newState: InitialState<T>) {
-        console.log(lastStates.length, 'lenght');
-
         if (typeof newState === 'function') {
             lastStates[currentIndex] = newState(lastStates[currentIndex])
         } else {
-
             lastStates[currentIndex] = newState;
         }
         render()
     }
+    console.log(lastStates, hookIndex, 'lastStates', 'hookIndex');
     return [lastStates[hookIndex++], setState]
 }
-
 /**
  * useMemo
  * @param {
