@@ -19,16 +19,16 @@
  *    clear():清空整个栈
  * }
 */
-type itemType = string | number | Object | Function | undefined | null | symbol
+type StackItemType = string | number | Object | Function | undefined | null | symbol
 interface Stackitems {
-  [key: number]: itemType
+  [key: number]: StackItemType
 }
 namespace StackProperty {
   export class Stack {
     private count: number
     private items: Stackitems
     constructor() {
-      this.count = 0//记录当前栈的长度
+      this.count= 0//记录当前栈的长度
       this.items = {}//存放栈内的东西的对象
     }
     push(element: Stackitems) {
@@ -41,14 +41,14 @@ namespace StackProperty {
     size(): number {
       return this.count
     }
-    peek(): itemType {
+    peek(): StackItemType {
       if (this.isEmpty()) {
         return undefined
       } else {
         return this.items[`${this.count - 1}`]
       }
     }
-    pop(): itemType {
+    pop(): StackItemType {
       if (this.isEmpty()) {
         return undefined
       }
