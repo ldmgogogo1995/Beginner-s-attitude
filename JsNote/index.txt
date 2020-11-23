@@ -1,0 +1,1 @@
+for in 迭代器便利数组时 如果数组里面元素是number类型会把number转化为string类型
