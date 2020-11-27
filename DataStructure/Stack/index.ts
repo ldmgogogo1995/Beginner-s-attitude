@@ -25,8 +25,8 @@ interface Stackitems {
 }
 namespace StackProperty {
   export class Stack {
-    private count: number
-    private items: Stackitems
+    count: number
+    items: Stackitems
     constructor() {
       this.count= 0//记录当前栈的长度
       this.items = {}//存放栈内的东西的对象
