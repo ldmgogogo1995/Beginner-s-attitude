@@ -7,6 +7,8 @@
  * head:储存头部节点
  * equalsFn(a,b)判断两个节点是否相同
  * push(element):从尾部添加一个节点
+ * remove(element):删除指定节点
+ * pop():删除最后一个元素并且返回该节点
 */
 const LinkNode = require('./LinkNodeCil')
 type NodeType = {
@@ -24,7 +26,27 @@ class LinkList {
     return a === b
   }
   push(element) {
-    const node = new LinkNode(element) //创建一个value为element的节点
+    //创建一个value为element的节点
+    const node = new LinkNode(element);
+    //当链表为空链表时只需要给头部赋值就可以了
+    if (this.count === 0) {
+      this.head = node
+    } else {
+      let current: NodeType = this.head
+      //根据第一个节点一个一个寻找一直找到最后一个节点
+      while (current.next !== undefined) {
+        current = current.next
+      }
+      current.next = node
+    }
+    this.count++
+  }
+  remove(element){
+
+  }
+  pop():NodeType{
+  
   }
 }
-console.log(LinkList, 'LinkListCil')
+const test = new LinkList()
+console.log(test, 'LinkListCil')
