@@ -4,10 +4,10 @@
 */
 namespace LinkChild {
 export class Node {
-    vlaue: any;
+    value: any;
     next: Node | null
-    constructor(vlaue: any) {
-      this.vlaue = vlaue;
+    constructor(value: any) {
+      this.value = value;
       this.next = undefined;
     }
   }

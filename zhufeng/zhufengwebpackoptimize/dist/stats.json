@@ -1,0 +1,1194 @@
+{
+  "hash": "9359c31fb77200cfecff",
+  "version": "5.9.0",
+  "time": 3267,
+  "builtAt": 1606656767420,
+  "publicPath": "auto",
+  "outputPath": "C:\\aproject\\zhufengwebpackoptimize\\dist",
+  "assetsByChunkName": {
+    "main": [
+      "main.js"
+    ]
+  },
+  "assets": [
+    {
+      "type": "asset",
+      "name": "main.js",
+      "size": 177789,
+      "chunkNames": [
+        "main"
+      ],
+      "chunkIdHints": [],
+      "auxiliaryChunkNames": [],
+      "auxiliaryChunkIdHints": [],
+      "emitted": true,
+      "comparedForEmit": false,
+      "cached": false,
+      "info": {
+        "javascriptModule": false,
+        "related": {
+          "sourceMap": "main.js.map"
+        },
+        "size": 177789
+      },
+      "filteredRelated": 0,
+      "related": [
+        {
+          "type": "sourceMap",
+          "name": "main.js.map",
+          "size": 210780,
+          "chunkNames": [],
+          "chunkIdHints": [],
+          "auxiliaryChunkNames": [
+            "main"
+          ],
+          "auxiliaryChunkIdHints": [],
+          "emitted": true,
+          "comparedForEmit": false,
+          "cached": false,
+          "info": {
+            "development": true,
+            "size": 210780
+          },
+          "related": {},
+          "chunks": [],
+          "auxiliaryChunks": [
+            0
+          ],
+          "isOverSizeLimit": false
+        }
+      ],
+      "chunks": [
+        0
+      ],
+      "auxiliaryChunks": [],
+      "isOverSizeLimit": false
+    },
+    {
+      "type": "asset",
+      "name": "index.html",
+      "size": 433,
+      "chunkNames": [],
+      "chunkIdHints": [],
+      "auxiliaryChunkNames": [],
+      "auxiliaryChunkIdHints": [],
+      "emitted": false,
+      "comparedForEmit": true,
+      "cached": false,
+      "info": {
+        "size": 433
+      },
+      "related": {},
+      "chunks": [],
+      "auxiliaryChunks": [],
+      "isOverSizeLimit": false
+    }
+  ],
+  "chunks": [
+    {
+      "rendered": true,
+      "initial": true,
+      "entry": true,
+      "recorded": false,
+      "size": 175006,
+      "sizes": {
+        "javascript": 173952,
+        "runtime": 1054
+      },
+      "names": [
+        "main"
+      ],
+      "idHints": [],
+      "runtime": [
+        "main"
+      ],
+      "files": [
+        "main.js"
+      ],
+      "auxiliaryFiles": [
+        "main.js.map"
+      ],
+      "hash": "a0ad77de7f8d6b1aad87",
+      "childrenByOrder": {},
+      "id": 0,
+      "siblings": [],
+      "parents": [],
+      "children": [],
+      "modules": [
+        {
+          "type": "module",
+          "moduleType": "javascript/auto",
+          "identifier": "C:\\aproject\\zhufengwebpackoptimize\\node_modules\\_moment@2.29.1@moment\\moment.js",
+          "name": "./node_modules/_moment@2.29.1@moment/moment.js",
+          "nameForCondition": "C:\\aproject\\zhufengwebpackoptimize\\node_modules\\_moment@2.29.1@moment\\moment.js",
+          "index": 1,
+          "preOrderIndex": 1,
+          "index2": 0,
+          "postOrderIndex": 0,
+          "size": 173902,
+          "sizes": {
+            "javascript": 173902
+          },
+          "cacheable": true,
+          "built": true,
+          "codeGenerated": true,
+          "cached": false,
+          "optional": false,
+          "orphan": false,
+          "dependent": true,
+          "issuer": "C:\\aproject\\zhufengwebpackoptimize\\src\\index.js",
+          "issuerName": "./src/index.js",
+          "issuerPath": [
+            {
+              "identifier": "C:\\aproject\\zhufengwebpackoptimize\\src\\index.js",
+              "name": "./src/index.js",
+              "id": 0
+            }
+          ],
+          "failed": false,
+          "errors": 0,
+          "warnings": 0,
+          "id": 1,
+          "issuerId": 0,
+          "chunks": [
+            0
+          ],
+          "assets": [],
+          "reasons": [
+            {
+              "moduleIdentifier": "C:\\aproject\\zhufengwebpackoptimize\\node_modules\\_moment@2.29.1@moment\\moment.js",
+              "module": "./node_modules/_moment@2.29.1@moment/moment.js",
+              "moduleName": "./node_modules/_moment@2.29.1@moment/moment.js",
+              "resolvedModuleIdentifier": "C:\\aproject\\zhufengwebpackoptimize\\node_modules\\_moment@2.29.1@moment\\moment.js",
+              "resolvedModule": "./node_modules/_moment@2.29.1@moment/moment.js",
+              "type": "cjs self exports reference",
+              "active": true,
+              "explanation": "",
+              "userRequest": null,
+              "loc": "8:67-81",
+              "moduleId": 1,
+              "resolvedModuleId": 1
+            },
+            {
+              "moduleIdentifier": "C:\\aproject\\zhufengwebpackoptimize\\node_modules\\_moment@2.29.1@moment\\moment.js",
+              "module": "./node_modules/_moment@2.29.1@moment/moment.js",
+              "moduleName": "./node_modules/_moment@2.29.1@moment/moment.js",
+              "resolvedModuleIdentifier": "C:\\aproject\\zhufengwebpackoptimize\\node_modules\\_moment@2.29.1@moment\\moment.js",
+              "resolvedModule": "./node_modules/_moment@2.29.1@moment/moment.js",
+              "type": "cjs self exports reference",
+              "active": true,
+              "explanation": "",
+              "userRequest": null,
+              "loc": "11:2-6",
+              "moduleId": 1,
+              "resolvedModuleId": 1
+            },
+            {
+              "moduleIdentifier": "C:\\aproject\\zhufengwebpackoptimize\\node_modules\\_moment@2.29.1@moment\\moment.js",
+              "module": "./node_modules/_moment@2.29.1@moment/moment.js",
+              "moduleName": "./node_modules/_moment@2.29.1@moment/moment.js",
+              "resolvedModuleIdentifier": "C:\\aproject\\zhufengwebpackoptimize\\node_modules\\_moment@2.29.1@moment\\moment.js",
+              "resolvedModule": "./node_modules/_moment@2.29.1@moment/moment.js",
+              "type": "module decorator",
+              "active": true,
+              "explanation": "",
+              "userRequest": null,
+              "loc": "2086:12-18",
+              "moduleId": 1,
+              "resolvedModuleId": 1
+            },
+            {
+              "moduleIdentifier": "C:\\aproject\\zhufengwebpackoptimize\\node_modules\\_moment@2.29.1@moment\\moment.js",
+              "module": "./node_modules/_moment@2.29.1@moment/moment.js",
+              "moduleName": "./node_modules/_moment@2.29.1@moment/moment.js",
+              "resolvedModuleIdentifier": "C:\\aproject\\zhufengwebpackoptimize\\node_modules\\_moment@2.29.1@moment\\moment.js",
+              "resolvedModule": "./node_modules/_moment@2.29.1@moment/moment.js",
+              "type": "cjs self exports reference",
+              "active": true,
+              "explanation": "",
+              "userRequest": null,
+              "loc": "2087:12-26",
+              "moduleId": 1,
+              "resolvedModuleId": 1
+            },
+            {
+              "moduleIdentifier": "C:\\aproject\\zhufengwebpackoptimize\\src\\index.js",
+              "module": "./src/index.js",
+              "moduleName": "./src/index.js",
+              "resolvedModuleIdentifier": "C:\\aproject\\zhufengwebpackoptimize\\src\\index.js",
+              "resolvedModule": "./src/index.js",
+              "type": "harmony side effect evaluation",
+              "active": true,
+              "explanation": "",
+              "userRequest": "moment",
+              "loc": "1:0-28",
+              "moduleId": 0,
+              "resolvedModuleId": 0
+            },
+            {
+              "moduleIdentifier": "C:\\aproject\\zhufengwebpackoptimize\\src\\index.js",
+              "module": "./src/index.js",
+              "moduleName": "./src/index.js",
+              "resolvedModuleIdentifier": "C:\\aproject\\zhufengwebpackoptimize\\src\\index.js",
+              "resolvedModule": "./src/index.js",
+              "type": "harmony import specifier",
+              "active": true,
+              "explanation": "",
+              "userRequest": "moment",
+              "loc": "2:12-18",
+              "moduleId": 0,
+              "resolvedModuleId": 0
+            }
+          ],
+          "usedExports": null,
+          "providedExports": null,
+          "optimizationBailout": [
+            "CommonJS bailout: this is used directly at 11:2-6",
+            "CommonJS bailout: module.exports is used directly at 2087:12-26",
+            "CommonJS bailout: module.exports is used directly at 8:67-81"
+          ],
+          "depth": 1
+        },
+        {
+          "type": "module",
+          "moduleType": "javascript/auto",
+          "identifier": "C:\\aproject\\zhufengwebpackoptimize\\src\\index.js",
+          "name": "./src/index.js",
+          "nameForCondition": "C:\\aproject\\zhufengwebpackoptimize\\src\\index.js",
+          "index": 0,
+          "preOrderIndex": 0,
+          "index2": 1,
+          "postOrderIndex": 1,
+          "size": 50,
+          "sizes": {
+            "javascript": 50
+          },
+          "cacheable": true,
+          "built": true,
+          "codeGenerated": true,
+          "cached": false,
+          "optional": false,
+          "orphan": false,
+          "dependent": false,
+          "issuer": null,
+          "issuerName": null,
+          "issuerPath": null,
+          "failed": false,
+          "errors": 0,
+          "warnings": 0,
+          "id": 0,
+          "issuerId": null,
+          "chunks": [
+            0
+          ],
+          "assets": [],
+          "reasons": [
+            {
+              "moduleIdentifier": null,
+              "module": null,
+              "moduleName": null,
+              "resolvedModuleIdentifier": null,
+              "resolvedModule": null,
+              "type": "entry",
+              "active": true,
+              "explanation": "",
+              "userRequest": "./src/index.js",
+              "loc": "main",
+              "moduleId": null,
+              "resolvedModuleId": null
+            }
+          ],
+          "usedExports": null,
+          "providedExports": [],
+          "optimizationBailout": [],
+          "depth": 0
+        },
+        {
+          "type": "module",
+          "moduleType": "runtime",
+          "identifier": "webpack/runtime/compat get default export",
+          "name": "webpack/runtime/compat get default export",
+          "nameForCondition": null,
+          "index": null,
+          "preOrderIndex": null,
+          "index2": null,
+          "postOrderIndex": null,
+          "size": 263,
+          "sizes": {
+            "runtime": 263
+          },
+          "built": false,
+          "codeGenerated": true,
+          "cached": false,
+          "optional": false,
+          "orphan": false,
+          "dependent": false,
+          "failed": false,
+          "errors": 0,
+          "warnings": 0,
+          "id": "",
+          "chunks": [
+            0
+          ],
+          "assets": [],
+          "reasons": [],
+          "usedExports": null,
+          "providedExports": [],
+          "optimizationBailout": [],
+          "depth": null
+        },
+        {
+          "type": "module",
+          "moduleType": "runtime",
+          "identifier": "webpack/runtime/define property getters",
+          "name": "webpack/runtime/define property getters",
+          "nameForCondition": null,
+          "index": null,
+          "preOrderIndex": null,
+          "index2": null,
+          "postOrderIndex": null,
+          "size": 308,
+          "sizes": {
+            "runtime": 308
+          },
+          "built": false,
+          "codeGenerated": true,
+          "cached": false,
+          "optional": false,
+          "orphan": false,
+          "dependent": false,
+          "failed": false,
+          "errors": 0,
+          "warnings": 0,
+          "id": "",
+          "chunks": [
+            0
+          ],
+          "assets": [],
+          "reasons": [],
+          "usedExports": null,
+          "providedExports": [],
+          "optimizationBailout": [],
+          "depth": null
+        },
+        {
+          "type": "module",
+          "moduleType": "runtime",
+          "identifier": "webpack/runtime/hasOwnProperty shorthand",
+          "name": "webpack/runtime/hasOwnProperty shorthand",
+          "nameForCondition": null,
+          "index": null,
+          "preOrderIndex": null,
+          "index2": null,
+          "postOrderIndex": null,
+          "size": 86,
+          "sizes": {
+            "runtime": 86
+          },
+          "built": false,
+          "codeGenerated": true,
+          "cached": false,
+          "optional": false,
+          "orphan": false,
+          "dependent": false,
+          "failed": false,
+          "errors": 0,
+          "warnings": 0,
+          "id": "",
+          "chunks": [
+            0
+          ],
+          "assets": [],
+          "reasons": [],
+          "usedExports": null,
+          "providedExports": [],
+          "optimizationBailout": [],
+          "depth": null
+        },
+        {
+          "type": "module",
+          "moduleType": "runtime",
+          "identifier": "webpack/runtime/make namespace object",
+          "name": "webpack/runtime/make namespace object",
+          "nameForCondition": null,
+          "index": null,
+          "preOrderIndex": null,
+          "index2": null,
+          "postOrderIndex": null,
+          "size": 274,
+          "sizes": {
+            "runtime": 274
+          },
+          "built": false,
+          "codeGenerated": true,
+          "cached": false,
+          "optional": false,
+          "orphan": false,
+          "dependent": false,
+          "failed": false,
+          "errors": 0,
+          "warnings": 0,
+          "id": "",
+          "chunks": [
+            0
+          ],
+          "assets": [],
+          "reasons": [],
+          "usedExports": null,
+          "providedExports": [],
+          "optimizationBailout": [],
+          "depth": null
+        },
+        {
+          "type": "module",
+          "moduleType": "runtime",
+          "identifier": "webpack/runtime/node module decorator",
+          "name": "webpack/runtime/node module decorator",
+          "nameForCondition": null,
+          "index": null,
+          "preOrderIndex": null,
+          "index2": null,
+          "postOrderIndex": null,
+          "size": 123,
+          "sizes": {
+            "runtime": 123
+          },
+          "built": false,
+          "codeGenerated": true,
+          "cached": false,
+          "optional": false,
+          "orphan": false,
+          "dependent": false,
+          "failed": false,
+          "errors": 0,
+          "warnings": 0,
+          "id": "",
+          "chunks": [
+            0
+          ],
+          "assets": [],
+          "reasons": [],
+          "usedExports": null,
+          "providedExports": [],
+          "optimizationBailout": [],
+          "depth": null
+        }
+      ],
+      "origins": [
+        {
+          "module": "",
+          "moduleIdentifier": "",
+          "moduleName": "",
+          "loc": "main",
+          "request": "./src/index.js"
+        }
+      ]
+    }
+  ],
+  "modules": [
+    {
+      "type": "module",
+      "moduleType": "javascript/auto",
+      "identifier": "C:\\aproject\\zhufengwebpackoptimize\\src\\index.js",
+      "name": "./src/index.js",
+      "nameForCondition": "C:\\aproject\\zhufengwebpackoptimize\\src\\index.js",
+      "index": 0,
+      "preOrderIndex": 0,
+      "index2": 1,
+      "postOrderIndex": 1,
+      "size": 50,
+      "sizes": {
+        "javascript": 50
+      },
+      "cacheable": true,
+      "built": true,
+      "codeGenerated": true,
+      "cached": false,
+      "optional": false,
+      "orphan": false,
+      "issuer": null,
+      "issuerName": null,
+      "issuerPath": null,
+      "failed": false,
+      "errors": 0,
+      "warnings": 0,
+      "id": 0,
+      "issuerId": null,
+      "chunks": [
+        0
+      ],
+      "assets": [],
+      "reasons": [
+        {
+          "moduleIdentifier": null,
+          "module": null,
+          "moduleName": null,
+          "resolvedModuleIdentifier": null,
+          "resolvedModule": null,
+          "type": "entry",
+          "active": true,
+          "explanation": "",
+          "userRequest": "./src/index.js",
+          "loc": "main",
+          "moduleId": null,
+          "resolvedModuleId": null
+        }
+      ],
+      "usedExports": null,
+      "providedExports": [],
+      "optimizationBailout": [],
+      "depth": 0
+    },
+    {
+      "type": "module",
+      "moduleType": "javascript/auto",
+      "identifier": "C:\\aproject\\zhufengwebpackoptimize\\node_modules\\_moment@2.29.1@moment\\moment.js",
+      "name": "./node_modules/_moment@2.29.1@moment/moment.js",
+      "nameForCondition": "C:\\aproject\\zhufengwebpackoptimize\\node_modules\\_moment@2.29.1@moment\\moment.js",
+      "index": 1,
+      "preOrderIndex": 1,
+      "index2": 0,
+      "postOrderIndex": 0,
+      "size": 173902,
+      "sizes": {
+        "javascript": 173902
+      },
+      "cacheable": true,
+      "built": true,
+      "codeGenerated": true,
+      "cached": false,
+      "optional": false,
+      "orphan": false,
+      "issuer": "C:\\aproject\\zhufengwebpackoptimize\\src\\index.js",
+      "issuerName": "./src/index.js",
+      "issuerPath": [
+        {
+          "identifier": "C:\\aproject\\zhufengwebpackoptimize\\src\\index.js",
+          "name": "./src/index.js",
+          "id": 0
+        }
+      ],
+      "failed": false,
+      "errors": 0,
+      "warnings": 0,
+      "id": 1,
+      "issuerId": 0,
+      "chunks": [
+        0
+      ],
+      "assets": [],
+      "reasons": [
+        {
+          "moduleIdentifier": "C:\\aproject\\zhufengwebpackoptimize\\node_modules\\_moment@2.29.1@moment\\moment.js",
+          "module": "./node_modules/_moment@2.29.1@moment/moment.js",
+          "moduleName": "./node_modules/_moment@2.29.1@moment/moment.js",
+          "resolvedModuleIdentifier": "C:\\aproject\\zhufengwebpackoptimize\\node_modules\\_moment@2.29.1@moment\\moment.js",
+          "resolvedModule": "./node_modules/_moment@2.29.1@moment/moment.js",
+          "type": "cjs self exports reference",
+          "active": true,
+          "explanation": "",
+          "userRequest": null,
+          "loc": "8:67-81",
+          "moduleId": 1,
+          "resolvedModuleId": 1
+        },
+        {
+          "moduleIdentifier": "C:\\aproject\\zhufengwebpackoptimize\\node_modules\\_moment@2.29.1@moment\\moment.js",
+          "module": "./node_modules/_moment@2.29.1@moment/moment.js",
+          "moduleName": "./node_modules/_moment@2.29.1@moment/moment.js",
+          "resolvedModuleIdentifier": "C:\\aproject\\zhufengwebpackoptimize\\node_modules\\_moment@2.29.1@moment\\moment.js",
+          "resolvedModule": "./node_modules/_moment@2.29.1@moment/moment.js",
+          "type": "cjs self exports reference",
+          "active": true,
+          "explanation": "",
+          "userRequest": null,
+          "loc": "11:2-6",
+          "moduleId": 1,
+          "resolvedModuleId": 1
+        },
+        {
+          "moduleIdentifier": "C:\\aproject\\zhufengwebpackoptimize\\node_modules\\_moment@2.29.1@moment\\moment.js",
+          "module": "./node_modules/_moment@2.29.1@moment/moment.js",
+          "moduleName": "./node_modules/_moment@2.29.1@moment/moment.js",
+          "resolvedModuleIdentifier": "C:\\aproject\\zhufengwebpackoptimize\\node_modules\\_moment@2.29.1@moment\\moment.js",
+          "resolvedModule": "./node_modules/_moment@2.29.1@moment/moment.js",
+          "type": "module decorator",
+          "active": true,
+          "explanation": "",
+          "userRequest": null,
+          "loc": "2086:12-18",
+          "moduleId": 1,
+          "resolvedModuleId": 1
+        },
+        {
+          "moduleIdentifier": "C:\\aproject\\zhufengwebpackoptimize\\node_modules\\_moment@2.29.1@moment\\moment.js",
+          "module": "./node_modules/_moment@2.29.1@moment/moment.js",
+          "moduleName": "./node_modules/_moment@2.29.1@moment/moment.js",
+          "resolvedModuleIdentifier": "C:\\aproject\\zhufengwebpackoptimize\\node_modules\\_moment@2.29.1@moment\\moment.js",
+          "resolvedModule": "./node_modules/_moment@2.29.1@moment/moment.js",
+          "type": "cjs self exports reference",
+          "active": true,
+          "explanation": "",
+          "userRequest": null,
+          "loc": "2087:12-26",
+          "moduleId": 1,
+          "resolvedModuleId": 1
+        },
+        {
+          "moduleIdentifier": "C:\\aproject\\zhufengwebpackoptimize\\src\\index.js",
+          "module": "./src/index.js",
+          "moduleName": "./src/index.js",
+          "resolvedModuleIdentifier": "C:\\aproject\\zhufengwebpackoptimize\\src\\index.js",
+          "resolvedModule": "./src/index.js",
+          "type": "harmony side effect evaluation",
+          "active": true,
+          "explanation": "",
+          "userRequest": "moment",
+          "loc": "1:0-28",
+          "moduleId": 0,
+          "resolvedModuleId": 0
+        },
+        {
+          "moduleIdentifier": "C:\\aproject\\zhufengwebpackoptimize\\src\\index.js",
+          "module": "./src/index.js",
+          "moduleName": "./src/index.js",
+          "resolvedModuleIdentifier": "C:\\aproject\\zhufengwebpackoptimize\\src\\index.js",
+          "resolvedModule": "./src/index.js",
+          "type": "harmony import specifier",
+          "active": true,
+          "explanation": "",
+          "userRequest": "moment",
+          "loc": "2:12-18",
+          "moduleId": 0,
+          "resolvedModuleId": 0
+        }
+      ],
+      "usedExports": null,
+      "providedExports": null,
+      "optimizationBailout": [
+        "CommonJS bailout: this is used directly at 11:2-6",
+        "CommonJS bailout: module.exports is used directly at 2087:12-26",
+        "CommonJS bailout: module.exports is used directly at 8:67-81"
+      ],
+      "depth": 1
+    },
+    {
+      "type": "module",
+      "moduleType": "runtime",
+      "identifier": "webpack/runtime/compat get default export",
+      "name": "webpack/runtime/compat get default export",
+      "nameForCondition": null,
+      "index": null,
+      "preOrderIndex": null,
+      "index2": null,
+      "postOrderIndex": null,
+      "size": 263,
+      "sizes": {
+        "runtime": 263
+      },
+      "built": false,
+      "codeGenerated": true,
+      "cached": false,
+      "optional": false,
+      "orphan": false,
+      "failed": false,
+      "errors": 0,
+      "warnings": 0,
+      "id": "",
+      "chunks": [
+        0
+      ],
+      "assets": [],
+      "reasons": [],
+      "usedExports": null,
+      "providedExports": [],
+      "optimizationBailout": [],
+      "depth": null
+    },
+    {
+      "type": "module",
+      "moduleType": "runtime",
+      "identifier": "webpack/runtime/define property getters",
+      "name": "webpack/runtime/define property getters",
+      "nameForCondition": null,
+      "index": null,
+      "preOrderIndex": null,
+      "index2": null,
+      "postOrderIndex": null,
+      "size": 308,
+      "sizes": {
+        "runtime": 308
+      },
+      "built": false,
+      "codeGenerated": true,
+      "cached": false,
+      "optional": false,
+      "orphan": false,
+      "failed": false,
+      "errors": 0,
+      "warnings": 0,
+      "id": "",
+      "chunks": [
+        0
+      ],
+      "assets": [],
+      "reasons": [],
+      "usedExports": null,
+      "providedExports": [],
+      "optimizationBailout": [],
+      "depth": null
+    },
+    {
+      "type": "module",
+      "moduleType": "runtime",
+      "identifier": "webpack/runtime/hasOwnProperty shorthand",
+      "name": "webpack/runtime/hasOwnProperty shorthand",
+      "nameForCondition": null,
+      "index": null,
+      "preOrderIndex": null,
+      "index2": null,
+      "postOrderIndex": null,
+      "size": 86,
+      "sizes": {
+        "runtime": 86
+      },
+      "built": false,
+      "codeGenerated": true,
+      "cached": false,
+      "optional": false,
+      "orphan": false,
+      "failed": false,
+      "errors": 0,
+      "warnings": 0,
+      "id": "",
+      "chunks": [
+        0
+      ],
+      "assets": [],
+      "reasons": [],
+      "usedExports": null,
+      "providedExports": [],
+      "optimizationBailout": [],
+      "depth": null
+    },
+    {
+      "type": "module",
+      "moduleType": "runtime",
+      "identifier": "webpack/runtime/make namespace object",
+      "name": "webpack/runtime/make namespace object",
+      "nameForCondition": null,
+      "index": null,
+      "preOrderIndex": null,
+      "index2": null,
+      "postOrderIndex": null,
+      "size": 274,
+      "sizes": {
+        "runtime": 274
+      },
+      "built": false,
+      "codeGenerated": true,
+      "cached": false,
+      "optional": false,
+      "orphan": false,
+      "failed": false,
+      "errors": 0,
+      "warnings": 0,
+      "id": "",
+      "chunks": [
+        0
+      ],
+      "assets": [],
+      "reasons": [],
+      "usedExports": null,
+      "providedExports": [],
+      "optimizationBailout": [],
+      "depth": null
+    },
+    {
+      "type": "module",
+      "moduleType": "runtime",
+      "identifier": "webpack/runtime/node module decorator",
+      "name": "webpack/runtime/node module decorator",
+      "nameForCondition": null,
+      "index": null,
+      "preOrderIndex": null,
+      "index2": null,
+      "postOrderIndex": null,
+      "size": 123,
+      "sizes": {
+        "runtime": 123
+      },
+      "built": false,
+      "codeGenerated": true,
+      "cached": false,
+      "optional": false,
+      "orphan": false,
+      "failed": false,
+      "errors": 0,
+      "warnings": 0,
+      "id": "",
+      "chunks": [
+        0
+      ],
+      "assets": [],
+      "reasons": [],
+      "usedExports": null,
+      "providedExports": [],
+      "optimizationBailout": [],
+      "depth": null
+    }
+  ],
+  "entrypoints": {
+    "main": {
+      "name": "main",
+      "chunks": [
+        0
+      ],
+      "assets": [
+        {
+          "name": "main.js",
+          "size": 177789
+        }
+      ],
+      "filteredAssets": 0,
+      "assetsSize": 177789,
+      "auxiliaryAssets": [
+        {
+          "name": "main.js.map",
+          "size": 210780
+        }
+      ],
+      "filteredAuxiliaryAssets": 0,
+      "auxiliaryAssetsSize": 210780,
+      "children": {},
+      "childAssets": {},
+      "isOverSizeLimit": false
+    }
+  },
+  "namedChunkGroups": {
+    "main": {
+      "name": "main",
+      "chunks": [
+        0
+      ],
+      "assets": [
+        {
+          "name": "main.js",
+          "size": 177789
+        }
+      ],
+      "filteredAssets": 0,
+      "assetsSize": 177789,
+      "auxiliaryAssets": [
+        {
+          "name": "main.js.map",
+          "size": 210780
+        }
+      ],
+      "filteredAuxiliaryAssets": 0,
+      "auxiliaryAssetsSize": 210780,
+      "children": {},
+      "childAssets": {},
+      "isOverSizeLimit": false
+    }
+  },
+  "errors": [],
+  "errorsCount": 0,
+  "warnings": [],
+  "warningsCount": 0,
+  "children": [
+    {
+      "name": "HtmlWebpackCompiler",
+      "hash": "fd1ccdd6d0c8f05e5b18",
+      "version": "5.9.0",
+      "time": 115,
+      "builtAt": 1606656764304,
+      "publicPath": "auto",
+      "outputPath": "C:\\aproject\\zhufengwebpackoptimize\\dist",
+      "assetsByChunkName": {
+        "HtmlWebpackPlugin_0": [
+          "__child-HtmlWebpackPlugin_0"
+        ]
+      },
+      "assets": [
+        {
+          "type": "asset",
+          "name": "__child-HtmlWebpackPlugin_0",
+          "size": 2065,
+          "chunkNames": [
+            "HtmlWebpackPlugin_0"
+          ],
+          "chunkIdHints": [],
+          "auxiliaryChunkNames": [],
+          "auxiliaryChunkIdHints": [],
+          "emitted": false,
+          "comparedForEmit": false,
+          "cached": true,
+          "info": {
+            "javascriptModule": false
+          },
+          "related": {},
+          "chunks": [
+            0
+          ],
+          "auxiliaryChunks": [],
+          "isOverSizeLimit": false
+        }
+      ],
+      "chunks": [
+        {
+          "rendered": true,
+          "initial": true,
+          "entry": true,
+          "recorded": false,
+          "size": 691,
+          "sizes": {
+            "javascript": 691
+          },
+          "names": [
+            "HtmlWebpackPlugin_0"
+          ],
+          "idHints": [],
+          "runtime": [
+            "HtmlWebpackPlugin_0"
+          ],
+          "files": [
+            "__child-HtmlWebpackPlugin_0"
+          ],
+          "auxiliaryFiles": [],
+          "hash": "77c44ccb43bfff2c573f",
+          "childrenByOrder": {},
+          "id": 0,
+          "siblings": [],
+          "parents": [],
+          "children": [],
+          "modules": [
+            {
+              "type": "module",
+              "moduleType": "javascript/auto",
+              "identifier": "C:\\aproject\\zhufengwebpackoptimize\\node_modules\\_html-webpack-plugin@4.5.0@html-webpack-plugin\\lib\\loader.js!C:\\aproject\\zhufengwebpackoptimize\\src\\index.html",
+              "name": "./node_modules/_html-webpack-plugin@4.5.0@html-webpack-plugin/lib/loader.js!./src/index.html",
+              "nameForCondition": "C:\\aproject\\zhufengwebpackoptimize\\src\\index.html",
+              "index": 0,
+              "preOrderIndex": 0,
+              "index2": 0,
+              "postOrderIndex": 0,
+              "size": 691,
+              "sizes": {
+                "javascript": 691
+              },
+              "cacheable": true,
+              "built": true,
+              "codeGenerated": true,
+              "cached": false,
+              "optional": false,
+              "orphan": false,
+              "dependent": false,
+              "issuer": null,
+              "issuerName": null,
+              "issuerPath": null,
+              "failed": false,
+              "errors": 0,
+              "warnings": 0,
+              "id": 0,
+              "issuerId": null,
+              "chunks": [
+                0
+              ],
+              "assets": [],
+              "reasons": [
+                {
+                  "moduleIdentifier": "C:\\aproject\\zhufengwebpackoptimize\\node_modules\\_html-webpack-plugin@4.5.0@html-webpack-plugin\\lib\\loader.js!C:\\aproject\\zhufengwebpackoptimize\\src\\index.html",
+                  "module": "./node_modules/_html-webpack-plugin@4.5.0@html-webpack-plugin/lib/loader.js!./src/index.html",
+                  "moduleName": "./node_modules/_html-webpack-plugin@4.5.0@html-webpack-plugin/lib/loader.js!./src/index.html",
+                  "resolvedModuleIdentifier": "C:\\aproject\\zhufengwebpackoptimize\\node_modules\\_html-webpack-plugin@4.5.0@html-webpack-plugin\\lib\\loader.js!C:\\aproject\\zhufengwebpackoptimize\\src\\index.html",
+                  "resolvedModule": "./node_modules/_html-webpack-plugin@4.5.0@html-webpack-plugin/lib/loader.js!./src/index.html",
+                  "type": "cjs self exports reference",
+                  "active": true,
+                  "explanation": "",
+                  "userRequest": null,
+                  "loc": "1:121-135",
+                  "moduleId": 0,
+                  "resolvedModuleId": 0
+                },
+                {
+                  "moduleIdentifier": null,
+                  "module": null,
+                  "moduleName": null,
+                  "resolvedModuleIdentifier": null,
+                  "resolvedModule": null,
+                  "type": "entry",
+                  "active": true,
+                  "explanation": "",
+                  "userRequest": "C:\\aproject\\zhufengwebpackoptimize\\node_modules\\_html-webpack-plugin@4.5.0@html-webpack-plugin\\lib\\loader.js!C:\\aproject\\zhufengwebpackoptimize\\src\\index.html",
+                  "loc": "HtmlWebpackPlugin_0",
+                  "moduleId": null,
+                  "resolvedModuleId": null
+                },
+                {
+                  "moduleIdentifier": null,
+                  "module": null,
+                  "moduleName": null,
+                  "resolvedModuleIdentifier": null,
+                  "resolvedModule": null,
+                  "type": null,
+                  "active": true,
+                  "explanation": "used as library export",
+                  "userRequest": null,
+                  "moduleId": null,
+                  "resolvedModuleId": null
+                }
+              ],
+              "usedExports": null,
+              "providedExports": null,
+              "optimizationBailout": [
+                "CommonJS bailout: module.exports is used directly at 1:121-135"
+              ],
+              "depth": 0
+            }
+          ],
+          "origins": [
+            {
+              "module": "",
+              "moduleIdentifier": "",
+              "moduleName": "",
+              "loc": "HtmlWebpackPlugin_0",
+              "request": "C:\\aproject\\zhufengwebpackoptimize\\node_modules\\_html-webpack-plugin@4.5.0@html-webpack-plugin\\lib\\loader.js!C:\\aproject\\zhufengwebpackoptimize\\src\\index.html"
+            }
+          ]
+        }
+      ],
+      "modules": [
+        {
+          "type": "module",
+          "moduleType": "javascript/auto",
+          "identifier": "C:\\aproject\\zhufengwebpackoptimize\\node_modules\\_html-webpack-plugin@4.5.0@html-webpack-plugin\\lib\\loader.js!C:\\aproject\\zhufengwebpackoptimize\\src\\index.html",
+          "name": "./node_modules/_html-webpack-plugin@4.5.0@html-webpack-plugin/lib/loader.js!./src/index.html",
+          "nameForCondition": "C:\\aproject\\zhufengwebpackoptimize\\src\\index.html",
+          "index": 0,
+          "preOrderIndex": 0,
+          "index2": 0,
+          "postOrderIndex": 0,
+          "size": 691,
+          "sizes": {
+            "javascript": 691
+          },
+          "cacheable": true,
+          "built": true,
+          "codeGenerated": true,
+          "cached": false,
+          "optional": false,
+          "orphan": false,
+          "issuer": null,
+          "issuerName": null,
+          "issuerPath": null,
+          "failed": false,
+          "errors": 0,
+          "warnings": 0,
+          "id": 0,
+          "issuerId": null,
+          "chunks": [
+            0
+          ],
+          "assets": [],
+          "reasons": [
+            {
+              "moduleIdentifier": "C:\\aproject\\zhufengwebpackoptimize\\node_modules\\_html-webpack-plugin@4.5.0@html-webpack-plugin\\lib\\loader.js!C:\\aproject\\zhufengwebpackoptimize\\src\\index.html",
+              "module": "./node_modules/_html-webpack-plugin@4.5.0@html-webpack-plugin/lib/loader.js!./src/index.html",
+              "moduleName": "./node_modules/_html-webpack-plugin@4.5.0@html-webpack-plugin/lib/loader.js!./src/index.html",
+              "resolvedModuleIdentifier": "C:\\aproject\\zhufengwebpackoptimize\\node_modules\\_html-webpack-plugin@4.5.0@html-webpack-plugin\\lib\\loader.js!C:\\aproject\\zhufengwebpackoptimize\\src\\index.html",
+              "resolvedModule": "./node_modules/_html-webpack-plugin@4.5.0@html-webpack-plugin/lib/loader.js!./src/index.html",
+              "type": "cjs self exports reference",
+              "active": true,
+              "explanation": "",
+              "userRequest": null,
+              "loc": "1:121-135",
+              "moduleId": 0,
+              "resolvedModuleId": 0
+            },
+            {
+              "moduleIdentifier": null,
+              "module": null,
+              "moduleName": null,
+              "resolvedModuleIdentifier": null,
+              "resolvedModule": null,
+              "type": "entry",
+              "active": true,
+              "explanation": "",
+              "userRequest": "C:\\aproject\\zhufengwebpackoptimize\\node_modules\\_html-webpack-plugin@4.5.0@html-webpack-plugin\\lib\\loader.js!C:\\aproject\\zhufengwebpackoptimize\\src\\index.html",
+              "loc": "HtmlWebpackPlugin_0",
+              "moduleId": null,
+              "resolvedModuleId": null
+            },
+            {
+              "moduleIdentifier": null,
+              "module": null,
+              "moduleName": null,
+              "resolvedModuleIdentifier": null,
+              "resolvedModule": null,
+              "type": null,
+              "active": true,
+              "explanation": "used as library export",
+              "userRequest": null,
+              "moduleId": null,
+              "resolvedModuleId": null
+            }
+          ],
+          "usedExports": null,
+          "providedExports": null,
+          "optimizationBailout": [
+            "CommonJS bailout: module.exports is used directly at 1:121-135"
+          ],
+          "depth": 0
+        }
+      ],
+      "entrypoints": {
+        "HtmlWebpackPlugin_0": {
+          "name": "HtmlWebpackPlugin_0",
+          "chunks": [
+            0
+          ],
+          "assets": [
+            {
+              "name": "__child-HtmlWebpackPlugin_0"
+            }
+          ],
+          "filteredAssets": 0,
+          "assetsSize": null,
+          "auxiliaryAssets": [],
+          "filteredAuxiliaryAssets": 0,
+          "auxiliaryAssetsSize": 0,
+          "children": {},
+          "childAssets": {},
+          "isOverSizeLimit": false
+        }
+      },
+      "namedChunkGroups": {
+        "HtmlWebpackPlugin_0": {
+          "name": "HtmlWebpackPlugin_0",
+          "chunks": [
+            0
+          ],
+          "assets": [
+            {
+              "name": "__child-HtmlWebpackPlugin_0"
+            }
+          ],
+          "filteredAssets": 0,
+          "assetsSize": null,
+          "auxiliaryAssets": [],
+          "filteredAuxiliaryAssets": 0,
+          "auxiliaryAssetsSize": 0,
+          "children": {},
+          "childAssets": {},
+          "isOverSizeLimit": false
+        }
+      },
+      "errors": [],
+      "errorsCount": 0,
+      "warnings": [],
+      "warningsCount": 0,
+      "children": []
+    }
+  ]
+}

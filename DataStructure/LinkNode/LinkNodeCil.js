@@ -5,8 +5,8 @@
 var LinkChild;
 (function (LinkChild) {
     var Node = /** @class */ (function () {
-        function Node(vlaue) {
-            this.vlaue = vlaue;
+        function Node(value) {
+            this.value = value;
             this.next = undefined;
         }
         return Node;
