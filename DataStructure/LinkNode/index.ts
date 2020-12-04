@@ -154,3 +154,4 @@ test.push(0)
 test.push(2)
 test.push(3)
 console.log(test, test.toString(), 'LinkListCil1')
+module.exports = LinkList
