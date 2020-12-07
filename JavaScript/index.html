@@ -2,42 +2,48 @@
 
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Document</title>
-    </head>
-    <style>
-        * {
-            margin: 0;
-        }
-        #root {
-            width: 100%;
-            height: 100%;
-            position: relative;
-        }
-        #box {
-            width: 100px;
-            height: 100px;
-            background: red;
-            position: absolute;
-            left: 100px;
-        }
-        button {
-            margin-top: 200px;
-        }
-    </style>
-    <body>
-        <div id="root">
-            <div id="box">123</div>
-            <button onclick="action('box')">向右运动</button>
-        </div>
 
-        <!-- <script src="./promise.js"></script> -->
-        <!-- <script src="./ajax.js"></script> -->
-        <!-- <script src="./es6/es2020.js"></script> -->
-        <!-- <button onclick="sendMessage('get','http://localhost:3000/shop/list')">发送请求</button> -->
-        <script src="./toys/action.js"></script>
-        <script></script>
-    </body>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 0;
+    }
+    
+    #root {
+        width: 100%;
+        height: 100%;
+        position: relative;
+    }
+    
+    #box {
+        width: 100px;
+        height: 100px;
+        background: red;
+        position: absolute;
+        left: 100px;
+    }
+    
+    button {
+        margin-top: 200px;
+    }
+</style>
+
+<body>
+    <div id="root">
+        <div id="box">123</div>
+        <button onclick="action('box')">向右运动</button>
+    </div>
+
+    <!-- <script src="./promise.js"></script> -->
+    <!-- <script src="./ajax.js"></script> -->
+    <!-- <script src="./es6/es2020.js"></script> -->
+    <!-- <button onclick="sendMessage('get','http://localhost:3000/shop/list')">发送请求</button> -->
+    <script src="./toys/action.js"></script>
+    <script></script>
+</body>
+
 </html>
