@@ -7,9 +7,9 @@ const action = (id) => {
   let x, y = 10
   const dom = document.getElementById(id)
   console.log(dom.style)
-  timer = setInterval(() => {
-    dom.style.left = dom.offsetLeft + x + 'px';
-    console.log(dom.style.left,'????')
-  }, 500)
-  
+  // timer = setInterval(() => {
+  //   dom.style.left = dom.offsetLeft + x + 'px';
+  //   console.log(dom.style.left,'????')
+  // }, 500)
+
 }
