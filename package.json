@@ -1,5 +1,6 @@
 {
   "dependencies": {
-    "@types/node": "^14.14.10"
+    "@types/node": "^14.14.10",
+    "socket.io": "^3.0.4"
   }
 }
