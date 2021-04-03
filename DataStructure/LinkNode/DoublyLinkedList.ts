@@ -19,4 +19,9 @@ class DoubliLinkedList extends LinkListtools {
         super(equalsFn)
         this.tail = undefined //新增的
     }
+    //任意位置插入
+    insert(element:DoublyNode,index:number){
+
+    }
+
 }

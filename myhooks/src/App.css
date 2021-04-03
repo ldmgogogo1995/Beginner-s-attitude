@@ -1,0 +1,10 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.scorll-continar {
+    height: 300px;
+    overflow: auto;
+}

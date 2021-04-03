@@ -2,15 +2,113 @@
 
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>聊天室</title>
-    </head>
-    <body>
-        <script src='./javascript/socket.io-client.js'>
-            console.log(132321321321321)
-                  // console.log(io,'io')
-        </script>
-    </body>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>聊天室</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    
+    .chat-warp {
+        width: 1100px;
+        margin: 0 auto;
+    }
+    
+    .chat-room {
+        height: 400px;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+        margin-top: 20px;
+    }
+    
+    .fl {
+        float: left;
+        box-sizing: border-box;
+    }
+    
+    .chat-room-left {
+        width: 800px;
+        height: 400px;
+        color: #999;
+    }
+    
+    .chat-room-right {
+        width: 290px;
+        border-left: 1px solid #ccc;
+        height: 400px;
+        color: orchid;
+    }
+</style>
+
+<body>
+    <div class="chat-warp">
+        <h2>罗大明不是废物</h2>
+        <div>
+            <p> <input type="text" id="username"> <input type="button" value="进入聊天室" onclick="enterRoom()"></p>
+        </div>
+        <div class="chat-room">
+            <div class="chat-room-left fl" id="left-room">聊天内容</div>
+            <div class="chat-room-right fl" id="right-room">系统消息</div>
+        </div>
+        <div>
+            <p><input type="text" name="" id="words"><input type="button" value="发送" onclick="send()"></p>
+        </div>
+    </div>
+    <script src="./javascript/socket.io-client.js"></script>
+    <script>
+        //连接socket服务器
+
+        var pageVars = {
+            leftRoom: document.getElementById('left-room'),
+            rightRoom: document.getElementById('right-room'),
+            wordsObj: document.getElementById('words'),
+            socketIo: null,
+
+        }
+
+        function enterRoom() {
+            let username = document.getElementById('username').value
+            if (username) {
+                pageVars.socketIo = io.connect('http://localhost:8081')
+                    //socketIo.emit('自定义时间名，传递的参数') 出发第一时间  
+                pageVars.socketIo.emit('come', {
+                    username
+                })
+                pageVars.socketIo.on('systemInfo', (msg) => {
+                    pageVars.rightRoom.innerHTML += '<p>' + msg + '</p>'
+                })
+                pageVars.socketIo.on('serveChating', (msg) => {
+                    pageVars.leftRoom.innerHTML += '<p>' + msg + '</p>'
+                })
+            } else {
+                alert('请输入你的昵称！！！')
+            }
+        }
+
+
+        function send() {
+            let msg = pageVars.wordsObj.value
+            if (!pageVars.socketIo) {
+                alert('请先登录聊天室')
+                return
+            }
+            if (!msg) {
+                alert('请输入要发送的内容')
+                return
+            }
+            pageVars.socketIo.emit('chating', msg)
+            pageVars.wordsObj.value = ''
+        }
+
+        (function() {
+
+        })
+    </script>
+</body>
+
 </html>

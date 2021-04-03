@@ -10,6 +10,7 @@
         "@types/node": "^14.14.2",
         "@types/react": "^16.9.0",
         "@types/react-dom": "^16.9.0",
+        "antd": "^4.10.0",
         "hox": "^1.1.1",
         "react": "^17.0.0",
         "react-dom": "^17.0.0",
