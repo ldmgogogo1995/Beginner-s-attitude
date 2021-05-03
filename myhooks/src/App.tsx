@@ -6,8 +6,8 @@ import './App.css'
 const App: React.FC = (props) => {
   return (
     <div className="App">
-      {/* <Count />
-      <Title /> */}
+      <Count />
+      <Title />
       {/* <ClassPage/> */}
     </div>
   );
