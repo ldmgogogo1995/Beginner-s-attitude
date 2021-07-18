@@ -5,7 +5,6 @@ var ldmLover = {
 
         },
         set name(a) {
-
             console.log(a, '赋值');
             // return a + 'sss'
         }

@@ -13,5 +13,4 @@ export class Node {
   }
 }
 
-console.log(LinkChild.Node)
 module.exports = LinkChild.Node

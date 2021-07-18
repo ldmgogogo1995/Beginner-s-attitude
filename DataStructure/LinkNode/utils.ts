@@ -4,4 +4,4 @@ namespace utils{
     return a === b
   }
 }
-module.exports = utils.equalsFn
+module.exports = utils
