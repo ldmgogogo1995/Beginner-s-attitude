@@ -1,66 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-  </head>
+</head>
 
-  <body>
-    <span onclick="myFuckingFoo()">大明加油</span>
+<body>
+    <button onclick="myFuckingFoo()">查找文件路径</button>
     <script>
-      /*练习
-       *创建Find函数，在未知深度的对象中寻找键值对，找到返回键值对所在路径，没知道则返回NULL
-       */
-      const obj = {
-        a: {
-          c: {
-            w: 2,
-            r: {
-              q: 4,
+        /*练习
+         *创建Find函数，在未知深度的对象中寻找键值对，找到返回键值对所在路径，没找到则返回NULL
+         */
+        const obj = {
+            a: {
+                c: {
+                    w: 2,
+                    r: {
+                        q: 4,
+                    },
+                },
+                d: 1,
+                f: 2,
+                e: 3,
             },
-          },
-          d: 1,
-          f: 2,
-          e: 3,
-        },
-        b: {
-          h: 4,
-          i: {
-            p: {
-              q: 5,
+            b: {
+                h: 4,
+                i: {
+                    p: {
+                        q: 5,
+                    },
+                },
             },
-          },
-        },
-        c: 9,
-      };
-      Object.prototype.Find = function (key, value) {
-        console.log(this, "this");
-        let obj = this;
-        let objArray = Object.entries(obj);
-        let resUrl = [];
-        let findRecord = [];
-        let isFind = false;
-        function findKeyValue() {
-          for (let i of objArray) {
-            console.log("key:", key, "value:", value);
-            console.log(i[0], i[1], "01");
-            console.log(Object.prototype.toString.call(i[1]) === "[object Object]");
-            if (i[0] === key && i[1] === value) {
-              isFind = true;
-              break
+            c: 9,
+        };
+
+
+        Object.prototype.Find = function(key, value) {
+            if (!key || !value) {
+                alert('请输入key~value')
+                return
             }
-            if (Object.prototype.toString.call(i[1]) === "[object Object]") {
-              i[1].Find(key, value)();
+            const OBJ_TYPE_TXT = '[object Object]'
+            const FUNCTION_TYPE_TEXT = '[object Function]'
+            const resultPath = []
+            let isFind = false
+                // 深度遍历
+            const deepLoop = (ikey, ivalue) => {
+                if (Object.prototype.toString.call(ivalue) !== FUNCTION_TYPE_TEXT) {
+                    resultPath.push(ikey)
+                }
+                if (ikey === key && ivalue === value) {
+                    resultPath.pop()
+                    isFind = true
+                    return
+                }
+                if (Object.prototype.toString.call(ivalue) === OBJ_TYPE_TXT) {
+                    for (let i in ivalue) {
+                        if (isFind) {
+                            break
+                        }
+                        deepLoop(i, ivalue[i])
+                    }
+                }
+                if (![OBJ_TYPE_TXT, FUNCTION_TYPE_TEXT].includes(Object.prototype.toString.call(ivalue))) {
+                    resultPath.pop()
+                }
             }
-          }
+            for (let i in this) {
+                if (isFind) {
+                    break
+                }
+                resultPath.length = 0
+                deepLoop(i, this[i])
+            }
+            return isFind ? '/' + resultPath.join('/') : null
+        };
+
+        function myFuckingFoo() {
+            console.log('文件路径为：', obj.Find('h', 4))
         }
-        return isFind ? "成功" : findKeyValue;
-      };
-      function myFuckingFoo() {
-        // console.log(obj.Find("q", 5)());
-        console.log(obj.Find("q", 5)(), "结果");
-      }
     </script>
-  </body>
+</body>
+
 </html>
